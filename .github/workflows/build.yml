@@ -105,16 +105,14 @@ jobs:
           cd -
         if: |
           matrix.toolchain == 'stable' &&
-          ( startsWith( github.ref, 'refs/tags/v' ) ||
-            github.ref == 'refs/tags/test-release' )
+          ( startsWith( github.ref, 'refs/tags/' ) )
       - uses: actions/upload-artifact@v4
         with:
           name: argus-${{ matrix.platform.os_name }}
           path: 'argus-*'
-        if: matrix.toolchain == 'stable' && github.ref == 'refs/tags/test-release'
+        if: matrix.toolchain == 'stable'
       - run: shasum -a 256 ${{ matrix.platform.name }}
         if: |
           matrix.toolchain == 'stable' &&
           matrix.platform.os == 'macOS-latest' &&
-          ( startsWith( github.ref, 'refs/tags/v' ) ||
-            github.ref == 'refs/tags/test-release' )
+          ( startsWith( github.ref, 'refs/tags/' )' )

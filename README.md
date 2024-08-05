@@ -1,5 +1,7 @@
 # argus
 
+[![uses nix](https://img.shields.io/badge/uses-nix-%237EBAE4)](https://nixos.org/)
+
 `argus` is a HTTP request logger built with Rust. It provides a flexible way to log incoming HTTP requests and customize response headers/body/codes. It also provides prometheus metrics by default on `/metrics`!
 
 It is named for [Argus Panoptes](https://en.wikipedia.org/wiki/Argus_Panoptes), a many-eyed giant in Greek Mythology, sometimes referred to as `All-seeing`.
