@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       packages: write
-      contents: read
+      contents: write
       attestations: write
       id-token: write
     steps:
@@ -109,6 +109,10 @@ jobs:
         with:
           name: argus-${{ matrix.platform.os_name }}
           path: 'argus-*'
+        if: matrix.toolchain == 'stable'
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ github.ref_name }} argus-*
         if: matrix.toolchain == 'stable'
       - run: shasum -a 256 ${{ matrix.platform.name }}
         if: |
