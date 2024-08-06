@@ -76,31 +76,31 @@ curl http://localhost:8080/metrics
 
 ## Examples
 
-1. Run Argus on a specific IP and port:
+Run Argus on a specific IP and port:
 
 ```bash
 ./argus --listen-addr 127.0.0.1 --port 3000
 ```
 
-1. Set custom response headers and body:
+Set custom response headers and body:
 
 ```bash
 ./argus --response-headers "X-Custom-Header:Value1,Content-Type:application/json" --response-body '{"status": "ok"}'
 ```
 
-1. Filter specific routes and methods:
+Filter specific routes and methods:
 
 ```bash
 ./argus --filter-routes "/api,/public" --filter-methods "GET,POST"
 ```
 
-1. Use a custom response status code:
+Use a custom response status code:
 
 ```bash
 ./argus --response-status 201
 ```
 
-1. Disable metrics collection:
+Disable metrics collection:
 
 ```bash
 ./argus --disable-metrics
