@@ -112,7 +112,7 @@ jobs:
         if: matrix.toolchain == 'stable'
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload ${{ github.ref_name }} argus-*
+        run: gh release upload ${{ github.ref_name }} ${{ matrix.platform.name }}
         if: matrix.toolchain == 'stable'
       - run: shasum -a 256 ${{ matrix.platform.name }}
         if: |
