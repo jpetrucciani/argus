@@ -44,21 +44,21 @@ Or use command-line options to customize its behavior:
 ./target/release/argus --listen-addr 127.0.0.1 --port 3000 --response-body "Custom response"
 ```
 
-## Configuration Options
+## Options
 
 Argus can be configured using command-line arguments or environment variables. Here's a table of all available options:
 
-| Option             | CLI Argument           | Environment Variable       | Default   | Description                                                 |
-| ------------------ | ---------------------- | -------------------------- | --------- | ----------------------------------------------------------- |
-| Listen Address     | `--listen-addr`        | `ARGUS_IP`                 | `0.0.0.0` | IP address to listen on                                     |
-| Port               | `--port`               | `ARGUS_PORT`               | `8080`    | Port to listen on                                           |
-| Response Headers   | `--response-headers`   | `ARGUS_RESPONSE_HEADERS`   | (None)    | Custom response headers (format: "Key1:Value1,Key2:Value2") |
-| Response Body      | `--response-body`      | `ARGUS_RESPONSE_BODY`      | (None)    | Custom response body text                                   |
-| Response Body File | `--response-body-file` | `ARGUS_RESPONSE_BODY_FILE` | (None)    | Path to file containing custom response body                |
-| Filter Routes      | `--filter-routes`      | `ARGUS_FILTER_ROUTES`      | (None)    | Routes to filter (comma-separated)                          |
-| Filter Methods     | `--filter-methods`     | `ARGUS_FILTER_METHODS`     | (None)    | HTTP methods to filter (comma-separated)                    |
-| Response Status    | `--response-status`    | `ARGUS_RESPONSE_STATUS`    | `200`     | Custom response status code                                 |
-| Disable Metrics    | `--disable-metrics`    | `ARGUS_DISABLE_METRICS`    |           | Disable Prometheus metrics collection                       |
+| Flag                   | Environment Variable       | Default   | Description                                                 |
+| ---------------------- | -------------------------- | --------- | ----------------------------------------------------------- |
+| `--listen-addr`        | `ARGUS_IP`                 | `0.0.0.0` | IP address to listen on                                     |
+| `--port`               | `ARGUS_PORT`               | `8080`    | Port to listen on                                           |
+| `--response-headers`   | `ARGUS_RESPONSE_HEADERS`   | (None)    | Custom response headers (format: "Key1:Value1,Key2:Value2") |
+| `--response-body`      | `ARGUS_RESPONSE_BODY`      | (None)    | Custom response body text                                   |
+| `--response-body-file` | `ARGUS_RESPONSE_BODY_FILE` | (None)    | Path to file containing custom response body                |
+| `--filter-routes`      | `ARGUS_FILTER_ROUTES`      | (None)    | Routes to filter (comma-separated)                          |
+| `--filter-methods`     | `ARGUS_FILTER_METHODS`     | (None)    | HTTP methods to filter (comma-separated)                    |
+| `--response-status`    | `ARGUS_RESPONSE_STATUS`    | `200`     | Custom response status code                                 |
+| `--disable-metrics`    | `ARGUS_DISABLE_METRICS`    |           | Disable Prometheus metrics collection                       |
 
 ## Metrics
 
